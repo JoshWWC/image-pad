@@ -59,16 +59,11 @@ button {
   margin: auto 0;
   width: 100%;
   bottom: 0px;
-  background-color: #8B4C39;
 }
 
 #paragraph p {
   font-family: "Times New Romans";
-  font-size: 16px;
-  padding: 0;
-  color: white;
-}
-
-#makeImage {
-
+  font-size: 32px;
+  vertical-align: bottom;
+  color: black;
 }

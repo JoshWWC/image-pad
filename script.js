@@ -1,6 +1,5 @@
-
-
 $(document).ready(function(){
+var score = 0;
   var createGrid = function(rows) {
 
     $('td.squares').css('background-color','white');
@@ -19,13 +18,45 @@ $(document).ready(function(){
       }
     }
 
-    randomSrc = "images/fall.jpg";
-    $img = $('<img src = "' + randomSrc + '" />');
-    //$("body").append("<img id='makeImage' src='" + randomSrc + "'/>");
+    var randomSrc="";
+    var randomizer = Math.floor(Math.random() * 3);
+    if (randomizer === 0) {
+      randomSrc = "images/fall.jpg";
+    } else if (randomizer === 1) {
+      randomSrc = "images/pengy.jpg";
+    } else if (randomizer === 2) {
+      randomSrc = "images/troll.jpg";
+    }
+    $("#myTable").css('background-image','url("' + randomSrc + '")');
 
-    $('div.squares').hover(function(){
-      $(this).remove();
-    });
+    if (randomizer === 0) {
+      $('div.squares').css('background-color','#078407')
+      $('div.squares').css('outline','solid #078407 2px')
+      $('div.squares').hover(function(){
+        $(this).remove();
+        score += 10;
+      });
+    } else if (randomizer === 1) {
+      $('div.squares').css('background-color','#0044cc')
+      $('div.squares').css('outline','solid #0044cc 2px')
+      $('div.squares').hover(function(){
+        $(this).remove();
+        score += 10;
+        });
+    } else if (randomizer === 2) {
+
+        $('div.squares').hover(function(){
+          var randomizerTROLL = Math.floor(Math.random() * 2);
+          if (randomizerTROLL === 0) {
+            $(this).remove()
+            score += 10;
+          } else if (randomizerTROLL === 1) {
+            var ranRGB = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+            $(this).css('background-color', ranRGB);
+            $(this).css('outline','solid ' + ranRGB + ' 2px');
+          }
+        });
+    }
   }
 
   $('button').click(function(){
@@ -36,7 +67,7 @@ $(document).ready(function(){
       gridSquares = 1;
     }
     createGrid(gridSquares);
-    var $p = $("<p>You can make a new pad by clicking the button again!</p>");
+    var $p = $("<p>Score: " + score + "</p>");
     $('#paragraph').append($p)
-  })
-})
+  });
+});
