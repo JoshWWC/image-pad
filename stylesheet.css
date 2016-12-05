@@ -1,0 +1,74 @@
+#wrapper {
+  width: 50%;
+  margin: auto 0;
+}
+
+#myTable {
+  background-image: url("images/fall.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.rows {
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  background-color: none;
+  outline: none;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.squares {
+  background-color: #8B4C39;
+  display: block;
+  height: 50px;
+  width: 50px;
+  outline: solid #8B4C39 2px;
+}
+
+button {
+  background-color: #8B4C39;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#newPad {
+  text-align: center;
+  display: inline-block;
+}
+
+#buttonDiv {
+  text-align:center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#paragraph {
+  position: fixed;
+  text-align: center;
+  margin: auto 0;
+  width: 100%;
+  bottom: 0px;
+  background-color: #8B4C39;
+}
+
+#paragraph p {
+  font-family: "Times New Romans";
+  font-size: 16px;
+  padding: 0;
+  color: white;
+}
+
+#makeImage {
+
+}
