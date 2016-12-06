@@ -1,7 +1,2 @@
-background is an image;
-	delete tiles covering it to reveal picture
-	/?congrats?/ pulls up over top (top of table height) of picture 
-	after full picture is revealed
-		(when table is empty)
-	every tile deleted updates score by 10
-	revealing full picture updates score 100
+make a "just draw button"
+	switches to sketch-pad mode
